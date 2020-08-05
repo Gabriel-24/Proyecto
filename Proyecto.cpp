@@ -4,6 +4,7 @@
 #include "Metodos.h"
 
 void MayMen();
+void Adivinium();
 
 main()
 {
@@ -18,7 +19,7 @@ main()
 			MayMen();
 			break;
 		case 2:
-			printf("\nEs un juego en el que se tiene que adivinar un número de 4 cifras, es decir entre 1000 y 9999");
+			Adivinium();
 			break;
 		case 3:
 			printf("\nConsiste en una pila de monedas, de la cual el jugador y la computadora van sacando monedas hasta que ya no quedan más en la pila");
@@ -88,6 +89,40 @@ void MayMen()
 		}
 }
 
+void Adivinium()
+{
+	int intentos=1,numero_aleatorio,numero_ingresado;
+	
+	srand(time(NULL));
+	numero_aleatorio=1000+rand()%(10000-1000);
+	printf("\n\nEl numero aleatorio es: %d",numero_aleatorio);
+	printf("\n --Es un juego en el que se tiene que adivinar un numero de 4 cifras entre 1000 y 9999--");
+	printf("\n1.Intentos para encontrar el numero: 10");
+	printf("\n2. El puntaje obtenido depende de la cantidad de intentos");
+	printf("\n4. Al perder o ganar el juego se mostrara el numero secreto");
+	
+	
+	
+	
+	
+	printf("\n\nIngrese un numero: ");
+	scanf("%d",&numero_ingresado);
+	
+	
+	
+	
+	if(numero_ingresado<1000 or numero_ingresado>9999)
+	{
+		printf("El numero debe tener 4 cifras. Vuelva a intentarlo");
+	}
+	if(numero_ingresado==numero_aleatorio)
+	{
+		printf("Felicitaciones! Acertaste el numero. Puntaje obtenido: %d",intentos);
+	}
+
+
+	intentos=intentos+1;
+}
 
 
 
@@ -102,9 +137,6 @@ void MayMen()
 
 
 
-
-
-qeqweqweqwe;
 
 
 
