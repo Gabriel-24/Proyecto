@@ -91,15 +91,20 @@ void MayMen()
 
 void Adivinium()
 {
-	int intentos=1,numero_aleatorio,numero_ingresado;
+	int puntaje=1,numero_aleatorio,numero_ingresado;
 	
 	srand(time(NULL));
 	numero_aleatorio=1000+rand()%(10000-1000);
+	
+	
 	printf("\n\nEl numero aleatorio es: %d",numero_aleatorio);
 	printf("\n --Es un juego en el que se tiene que adivinar un numero de 4 cifras entre 1000 y 9999--");
 	printf("\n1.Intentos para encontrar el numero: 10");
-	printf("\n2. El puntaje obtenido depende de la cantidad de intentos");
-	printf("\n4. Al perder o ganar el juego se mostrara el numero secreto");
+	printf("\n2.El puntaje obtenido depende de la cantidad de intentos");
+	printf("\n4.Si el jugador adivina el numero gana la partida");
+	printf("\n5.Se te indicara las posiciones que ocupan los numeros ingresados (misma posicion o otra posicion)(1 vez como maximo)");
+	
+	
 	
 	
 	
@@ -117,11 +122,11 @@ void Adivinium()
 	}
 	if(numero_ingresado==numero_aleatorio)
 	{
-		printf("Felicitaciones! Acertaste el numero. Puntaje obtenido: %d",intentos);
+		printf("Felicitaciones! Acertaste el numero. Puntaje obtenido: %d",puntaje);
 	}
 
 
-	intentos=intentos+1;
+	puntaje=puntaje+1;
 }
 
 
