@@ -22,7 +22,7 @@ main()
  
     }  
      
-    printf("la cantidad de monedas a retirar es: %d", monedas);
+    printf("\nla cantidad de monedas a retirar es: %d", monedas);
     
    
 }
