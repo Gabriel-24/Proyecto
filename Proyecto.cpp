@@ -92,6 +92,10 @@ void MayMen()
 void Adivinium()
 {
 	int puntaje=1,numero_aleatorio,numero_ingresado;
+	int primer, segundo, tercero, cuarto;
+	int primer_numero, segundo_numero, tercer_numero, cuarto_numero;
+	
+	
 	
 	srand(time(NULL));
 	numero_aleatorio=1000+rand()%(10000-1000);
