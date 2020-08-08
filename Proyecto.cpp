@@ -5,6 +5,7 @@
 
 void MayMen();
 void Adivinium();
+void warcoin();
 
 main()
 {
@@ -93,12 +94,19 @@ void Adivinium()
 {
 	int puntaje=1,numero_aleatorio,numero_ingresado;
 	int primer, segundo, tercero, cuarto;
-	int primer_numero, segundo_numero, tercer_numero, cuarto_numero;
+	int a=0,b=0,c=0,d=0;
 	
 	
 	
 	srand(time(NULL));
 	numero_aleatorio=1000+rand()%(10000-1000);
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	printf("\n\nEl numero aleatorio es: %d",numero_aleatorio);
@@ -114,13 +122,34 @@ void Adivinium()
 	
 	
 	
+	
+	
+	
+	
 	printf("\n\nIngrese un numero: ");
 	scanf("%d",&numero_ingresado);
 	
 	
 	
 	
-	if(numero_ingresado<1000 or numero_ingresado>9999)
+	if(numero_ingresado>=1000 or numero_ingresado<=9999)
+	{
+		a = numero_aleatorio / 1000; // primer digito
+    	b = (numero_aleatorio / 100) % 10; // segundo digito
+    	c = (numero_aleatorio / 10) % 10; // tercer digito
+    	d = numero_aleatorio % 10; // ultimo digito
+		
+		printf("%d   %d   %d   %d   \n", a, b, c, d);
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	else
 	{
 		printf("El numero debe tener 4 cifras. Vuelva a intentarlo");
 	}
@@ -133,7 +162,29 @@ void Adivinium()
 	puntaje=puntaje+1;
 }
 
-
+void warcoin()
+{
+		int i, v[20], min, max, monedas;
+	
+	printf("ingrese la cantidad minima de monedas que se pueden retirar: ");
+	scanf("%d", &min);
+	
+	printf("ingrese la cantidad maxima de monedas que se puede retirar: ");
+	scanf("%d", &max);
+	
+	srand(time(NULL));
+	for(i=0; i<=50; i++)
+	{
+    
+    v[i]=10+rand()%(50)+1-10;
+   
+	printf("%d ", v[i]);
+ 
+    }  
+     
+    printf("\nla cantidad de monedas a retirar es: %d", monedas);
+	
+}
 
 
 
