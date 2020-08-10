@@ -94,7 +94,7 @@ void Adivinium()
 {
 	int puntaje=1,numero_aleatorio,numero_ingresado;
 	int primer, segundo, tercero, cuarto;
-	int a=0,b=0,c=0,d=0;
+	int a,b,c,d;
 	
 	
 	
@@ -102,12 +102,7 @@ void Adivinium()
 	numero_aleatorio=1000+rand()%(10000-1000);
 	
 	
-	
-	
-	
-	
-	
-	
+
 	
 	printf("\n\nEl numero aleatorio es: %d",numero_aleatorio);
 	printf("\n --Es un juego en el que se tiene que adivinar un numero de 4 cifras entre 1000 y 9999--");
@@ -134,18 +129,15 @@ void Adivinium()
 	
 	if(numero_ingresado>=1000 or numero_ingresado<=9999)
 	{
-		a = numero_aleatorio / 1000; // primer digito
-    	b = (numero_aleatorio / 100) % 10; // segundo digito
-    	c = (numero_aleatorio / 10) % 10; // tercer digito
-    	d = numero_aleatorio % 10; // ultimo digito
+		a=  numero_aleatorio % 10;
+		numero_aleatorio = (numero_aleatorio - a) / 10;
+		b= numero_aleatorio % 10;
+		numero_aleatorio = (numero_aleatorio - b) / 10;
+		c= numero_aleatorio % 10;
+		numero_aleatorio = (numero_aleatorio - c) / 10;
+		numero_aleatorio= numero_aleatorio;
 		
 		printf("%d   %d   %d   %d   \n", a, b, c, d);
-		
-		
-		
-		
-		
-		
 		
 		
 	}
