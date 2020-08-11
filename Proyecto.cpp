@@ -93,7 +93,7 @@ void MayMen()
 void Adivinium()
 {
 	int puntaje=1,numero_aleatorio,numero_ingresado;
-	int primer, segundo, tercero, cuarto;
+	int primero, segundo, tercero, cuarto;
 	int a,b,c,d;
 	
 	
@@ -129,15 +129,15 @@ void Adivinium()
 	
 	if(numero_ingresado>=1000 or numero_ingresado<=9999)
 	{
-		a=  numero_aleatorio % 10;
-		numero_aleatorio = (numero_aleatorio - a) / 10;
-		b= numero_aleatorio % 10;
-		numero_aleatorio = (numero_aleatorio - b) / 10;
-		c= numero_aleatorio % 10;
-		numero_aleatorio = (numero_aleatorio - c) / 10;
-		numero_aleatorio= numero_aleatorio;
+	cuarto = numero_aleatorio%10;
+	numero_aleatorio = numero_aleatorio/10;
+	tercero = numero_aleatorio%10;
+	numero_aleatorio = numero_aleatorio/10;
+	segundo = numero_aleatorio%10;
+	numero_aleatorio = numero_aleatorio/10;
+	primero = numero_aleatorio;				
 		
-		printf("%d   %d   %d   %d   \n", a, b, c, d);
+		printf("%d   %d   %d   %d   \n", primero, segundo, tercero, cuarto);
 		
 		
 	}
