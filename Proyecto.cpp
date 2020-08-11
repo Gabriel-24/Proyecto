@@ -137,9 +137,7 @@ void Adivinium()
 	numero_aleatorio = numero_aleatorio/10;
 	primero = numero_aleatorio;				
 		
-		printf("%d   %d   %d   %d   \n", primero, segundo, tercero, cuarto);
-		
-		
+		printf("%d   %d   %d   %d   \n", primero, segundo, tercero, cuarto);	
 	}
 	else
 	{
@@ -152,7 +150,50 @@ void Adivinium()
 
 
 	puntaje=puntaje+1;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void warcoin()
 {
