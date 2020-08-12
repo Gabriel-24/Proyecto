@@ -48,13 +48,13 @@ void juego()
 	scanf("%d",&cant_max);
 	
 	while(cant_min<0){
-			printf("\nIngrese la cantidad minima: ");
+			printf("\nIngresa la cantidad minima de monedas que se pueden retirar: ");
 			scanf("%d",&cant_min);
 		}
 	
 	while(cant_max < cant_min){
 		
-		printf("\nIngrese la cantidad maxima: ");
+		printf("\nIngresa la cantidad maxima de monedas que se pueden retirar:");
 		scanf("%d",&cant_max);
 		
 	}
@@ -180,9 +180,9 @@ void Reglas()
     system("cls");
     warcoin();
 	printf("\n\n Warcoin es un juego de monedas. Se debe ingresar una cantidad minima y maxima   para comenzar el juego .");
-	printf("\n El juego pondra la pila de monedas a sacar aleatoriamente a su vez elige el tur_no , se juega de a dos.");
+	printf("\n El juego pondra la pila de monedas a sacar aleatoriamente a su vez elige el turno , se juega de a dos.");
 	printf("\n El usuario y la computadora deberan ir sacando monedas de la pila, hasta que la pila se quede sin monedas");
-	printf("\n o con monedas menor a la cantidad minima, el primero en dejar la pila sin mone_das GANA ");
+	printf("\n o con monedas menor a la cantidad minima, el primero en dejar la pila sin monedas GANA ");
     printf("\n\n\t Puntaje: ");
     printf("\n Para calcular el puntaje si el usuario llega primero gana un total de 5 puntos, de lo contrario gana la computadora ");
     printf("\n\n");
