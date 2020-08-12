@@ -10,7 +10,6 @@ void warcoin();
 main()
 {
 	int opcion_final;
-	system("cls");
 	opcion_final=menu();
 	do
 	{
@@ -23,7 +22,7 @@ main()
 			Adivinium();
 			break;
 		case 3:
-			printf("\nConsiste en una pila de monedas, de la cual el jugador y la computadora van sacando monedas hasta que ya no quedan más en la pila");
+			warcoin();
 			break;	
 		case 4:
 			printf("\nEste juego cuenta con una base de palabras asociadas a la codificación de algoritmos y al lenguaje de programación C++");
@@ -89,6 +88,7 @@ void MayMen()
 			printf("\n\nNo acerto el numero ingresado ");
 			printf("\n\nEl numero aleatorio es: %d",numero_aleatorio);
 		}
+		
 }
 
 void Adivinium()
@@ -153,54 +153,33 @@ void Adivinium()
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void warcoin()
 {
-		int i, v[20], min, max, monedas;
-	
-	printf("ingrese la cantidad minima de monedas que se pueden retirar: ");
-	scanf("%d", &min);
-	
-	printf("ingrese la cantidad maxima de monedas que se puede retirar: ");
-	scanf("%d", &max);
-	
+	int opcion=0;
 	srand(time(NULL));
-	for(i=0; i<=50; i++)
-	{
-    
-    v[i]=10+rand()%(50)+1-10;
-   
-	printf("%d ", v[i]);
- 
-    }  
-     
-    printf("\nla cantidad de monedas a retirar es: %d", monedas);
-	
+	do{
+	system("cls");
+	system ("color 30");
+	warcoin();	
+	printf("\n1.- Comenzar Juego\n");
+    printf("2.- Reglas\n");
+    printf("3.- Salir \n");
+    printf("\nIngrese una opcion: ");
+    scanf("%d", &opcion);
+    if(opcion==1){
+    	juego();	
+	    system("pause");
+		}
+    if(opcion==2){
+		Reglas();
+	    system("pause");		
+		}
+	if(opcion==3){
+		system("cls");
+		printf("\n\nAdios, buen Juego!!\n\n");
+	}
+    }while( opcion != 3); 
+      system("PAUSE");
 }
 
 
