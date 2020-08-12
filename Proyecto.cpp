@@ -5,7 +5,7 @@
 
 void MayMen();
 void Adivinium();
-void warcoin();
+void WarCoin();
 
 main()
 {
@@ -22,7 +22,7 @@ main()
 			Adivinium();
 			break;
 		case 3:
-			warcoin();
+			WarCoin();
 			break;	
 		case 4:
 			printf("\nEste juego cuenta con una base de palabras asociadas a la codificación de algoritmos y al lenguaje de programación C++");
@@ -153,7 +153,7 @@ void Adivinium()
 }
 
 
-void warcoin()
+void WarCoin()
 {
 	int opcion=0;
 	srand(time(NULL));

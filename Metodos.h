@@ -1,4 +1,12 @@
 int menu();
+void juego();
+void separar(int n, int &d1, int &d2, int &d3, int &d4);
+void warcoin();
+void Reglas();
+int comprobar_monedas_usuario(int cant_max, int cant_min,int monedas);
+
+
+
 int menu()
 {	
 	int opcion;
@@ -13,7 +21,6 @@ int menu()
 	return opcion;
 }
 
-void separar(int n, int &d1, int &d2, int &d3, int &d4);
 void separar(int n, int &d1, int &d2, int &d3, int &d4)
 {
 	d4 = n % 10;
@@ -24,7 +31,6 @@ void separar(int n, int &d1, int &d2, int &d3, int &d4)
 	d1 = n / 10;
 }
 
-void juego();
 void juego()
 {
 	
@@ -162,7 +168,6 @@ void juego()
 }
 }
 
-void warcoin();
 void warcoin()
 {
 	printf("                  WARCOIN                    \n");
@@ -170,7 +175,6 @@ void warcoin()
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 }
 
-void Reglas();
 void Reglas()
 {   
     system("cls");
@@ -185,7 +189,6 @@ void Reglas()
 	system("pause");
 }
 
-int comprobar_monedas_usuario(int cant_max, int cant_min,int monedas);
 int comprobar_monedas_usuario(int cant_max, int cant_min,int monedas)
 {
 	
