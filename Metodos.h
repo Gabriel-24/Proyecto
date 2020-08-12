@@ -13,3 +13,13 @@ int menu()
 	return opcion;
 }
 
+void separar(int n, int &d1, int &d2, int &d3, int &d4);
+void separar(int n, int &d1, int &d2, int &d3, int &d4)
+{
+	d4 = n % 10;
+	n = n / 10;	
+	d3 = n % 10;
+	n = n / 10;
+	d2 = n % 10;
+	d1 = n / 10;
+}

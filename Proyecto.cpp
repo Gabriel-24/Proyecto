@@ -92,80 +92,63 @@ void MayMen()
 
 void Adivinium()
 {
-	int puntaje=1,numero_aleatorio,numero_ingresado;
+	int puntaje=11,numero_aleatorio=0,numero_ingresado;
+	int contador=9,intentos=0,intento_falso=1,correctos=0,malaposicion=0;
 	int primero, segundo, tercero, cuarto;
-	int a,b,c,d;
+	int x1,x2,x3,x4;
 	
-	
-	
-	srand(time(NULL));
-	numero_aleatorio=1000+rand()%(10000-1000);
-	
-	
-
-	
-	printf("\n\nEl numero aleatorio es: %d",numero_aleatorio);
 	printf("\n --Es un juego en el que se tiene que adivinar un numero de 4 cifras entre 1000 y 9999--");
 	printf("\n1.Intentos para encontrar el numero: 10");
 	printf("\n2.El puntaje obtenido depende de la cantidad de intentos");
 	printf("\n4.Si el jugador adivina el numero gana la partida");
 	printf("\n5.Se te indicara las posiciones que ocupan los numeros ingresados (misma posicion o otra posicion)(1 vez como maximo)");
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	printf("\n6.Jugaremos con numeros de 4 cifras");
+	srand(time(NULL));
+	numero_aleatorio=1000 + rand()%8999;;
+	separar(numero_aleatorio,primero,segundo,tercero,cuarto);
+	printf("Numero: %d",numero_aleatorio);
+	do
+	{	
 	printf("\n\nIngrese un numero: ");
 	scanf("%d",&numero_ingresado);
+	separar(numero_ingresado,x1,x2,x3,x4);
 	
+	if(x1==primero) correctos++;
+	if(x2==segundo) correctos++;
+	if(x3==tercero) correctos++;
+	if(x4==cuarto) correctos++;
+	if(x1==segundo or x1==tercero or x1==cuarto) malaposicion++;
+	if(x2==primero or x2==tercero or x2==cuarto) malaposicion++;
+	if(x3==primero or x3==segundo or x3==cuarto) malaposicion++;
+	if(x4==primero or x4==segundo or x4==tercero) malaposicion++;
 	
-	
-	
-	if(numero_ingresado>=1000 or numero_ingresado<=9999)
+	if(numero_ingresado<1000 or numero_ingresado>9999)
 	{
-	cuarto = numero_aleatorio%10;
-	numero_aleatorio = numero_aleatorio/10;
-	tercero = numero_aleatorio%10;
-	numero_aleatorio = numero_aleatorio/10;
-	segundo = numero_aleatorio%10;
-	numero_aleatorio = numero_aleatorio/10;
-	primero = numero_aleatorio;				
-		
-		printf("%d   %d   %d   %d   \n", primero, segundo, tercero, cuarto);	
+		printf("\nIntentos: %d", intento_falso);
+		printf("\nEl numero debe tener 4 cifras. Vuelva a intentarlo");
 	}
 	else
 	{
-		printf("El numero debe tener 4 cifras. Vuelva a intentarlo");
-	}
+		printf("\nIntentos: %d", intento_falso);
+		printf("\nCant. Misma Posicion: %d - Cant. Otra Posicion: %d",correctos,malaposicion);
+	}	
+	
+	contador=contador-1;
+	intento_falso=intento_falso+1;
+	puntaje=puntaje-1;
+	}while(contador<11 and contador>=0 and numero_ingresado!=numero_aleatorio);
+	
+	
 	if(numero_ingresado==numero_aleatorio)
 	{
-		printf("Felicitaciones! Acertaste el numero. Puntaje obtenido: %d",puntaje);
+		printf("\n\nFelicitaciones! Acertaste el numero. Puntaje obtenido: %d",puntaje);
 	}
-
-
-	puntaje=puntaje+1;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	else
+	{
+		printf("\n\nNo adivino el numero aleatorio ");
+		printf("\n\nEl numero aleatorio era: %d. Puntaje obtenido: 0",numero_aleatorio);
+	}
+		
 }
 
 
