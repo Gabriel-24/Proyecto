@@ -44,6 +44,7 @@ main()
 
 void MayMen()
 {
+	system("cls");
 	int numero_aleatorio=0,intentos=0,intentos_falso=1,contador=9, numero_ingresado, numero_mayor=999, numero_menor=1;
 	printf("\n--Este juego consiste en adivinar un numero que esta entre 1 y 999 denominado numero secreto--");
 	printf("\n1. Itentos para encontrar el numero: 10");
@@ -92,6 +93,7 @@ void MayMen()
 
 void Adivinium()
 {
+	system("cls");
 	int puntaje=11,numero_aleatorio=0,numero_ingresado;
 	int contador=9,intentos=0,intento_falso=1,correctos=0,malaposicion=0;
 	int primero, segundo, tercero, cuarto;
@@ -145,8 +147,7 @@ void Adivinium()
 	}
 	else
 	{
-		printf("\n\nNo adivino el numero aleatorio ");
-		printf("\n\nEl numero aleatorio era: %d. Puntaje obtenido: 0",numero_aleatorio);
+		printf("\n\nNo adivino el numero aleatorio, El numero aleatorio era: %d. Puntaje obtenido: 0",numero_aleatorio);
 	}
 		
 }
