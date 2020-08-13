@@ -42,9 +42,9 @@ void juego()
 	
 	cant_inicial = 10 + rand()% 40 ;
 	
-	printf("\nIngrese la cantidad minima: ");
+	printf("\nIngresa la cantidad minima de monedas que se pueden retirar:");
 	scanf("%d",&cant_min);
-	printf("\nIngrese la cantidad maxima: ");
+	printf("\nIngresa la cantidad maxima de monedas que se pueden retirar:");
 	scanf("%d",&cant_max);
 	
 	while(cant_min<0){
