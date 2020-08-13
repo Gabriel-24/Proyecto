@@ -6,6 +6,7 @@
 void MayMen();
 void Adivinium();
 void WarCoin();
+void Ahorcado();
 
 main()
 {
@@ -25,7 +26,7 @@ main()
 			WarCoin();
 			break;	
 		case 4:
-			printf("\nEste juego cuenta con una base de palabras asociadas a la codificación de algoritmos y al lenguaje de programación C++");
+			Ahorcado();
 			break;
 		case 5:
 			printf("\nUsted esta saliendo del programa...");
@@ -182,6 +183,10 @@ void WarCoin()
       system("PAUSE");
 }
 
+void Ahorcado()
+{
+	
+}
 
 
 

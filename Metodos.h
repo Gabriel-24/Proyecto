@@ -44,7 +44,7 @@ void juego()
 	
 	printf("\nIngresa la cantidad minima de monedas que se pueden retirar:");
 	scanf("%d",&cant_min);
-	printf("\nIngresa la cantidad maxima de monedas que se pueden retirar:");
+	printf("Ingresa la cantidad maxima de monedas que se pueden retirar:");
 	scanf("%d",&cant_max);
 	
 	while(cant_min<0){
@@ -64,14 +64,14 @@ void juego()
 
 	if(turno == 2){
 		
-		printf("\nEmpieza el usuario ");
+		printf("\nInicia la partida el usuario");
 
 	        do{
 	        	if(cant_inicial >= cant_min )
 	        	{	
 	        		
 	        		
-	      	 		 printf("\nIngrese la cantidad de monedas a sacar= ");
+	      	 		 printf("\nIngrese la cantidad de monedas a sacar: ");
           			 scanf("%d",&monedas);
             		 
 	        		 monedas=comprobar_monedas_usuario(cant_max,cant_min,monedas);
@@ -80,7 +80,7 @@ void juego()
 	            		
 	            	 printf("\nmonedas insuficientes, por favor ingrese un valor mas chico\n");	
 	            		
-	            	 printf("\nIngrese la cantidad de monedas a sacar= ");
+	            	 printf("\nIngrese la cantidad de monedas a sacar: ");
           			 scanf("%d",&monedas);
             		 
 	        		 monedas=comprobar_monedas_usuario(cant_max,cant_min,monedas);
@@ -89,7 +89,7 @@ void juego()
 	            printf("\nLas monedas que quedan son : %d",cant_inicial);
 	            
 	            if(cant_inicial<cant_min){
-					printf("\n\nFELICIDADES USTED GANO!! %d \n\n",puntaje+5);
+					printf("\n\nFELICIDADES USTED GANO!! %d \n\n",puntaje);
 					break;
 					}
 				monedas_comp=cant_min + rand() % (cant_max-cant_min);
@@ -98,7 +98,7 @@ void juego()
 	            	     monedas_comp=cant_min + rand() % (cant_max-cant_min);
 	            	}
 	            
-				printf("\nLa Computadora saca = %d monedas",monedas_comp);
+				printf("\nLa computadora saco %d monedas de la pila ",monedas_comp);
 	                                                 
 	            if(monedas_comp<=cant_inicial){
 	            cant_inicial=cant_inicial-monedas_comp;
@@ -116,7 +116,7 @@ void juego()
 		
 	}else{
 		
-		printf("\nEmpieza la computadora ");
+		printf("\nInicia la partida la computadora");
         
 	       do{
 	       		if(cant_inicial >= cant_min)
@@ -136,7 +136,7 @@ void juego()
                         printf("\nLas monedas que quedan son : %d",cant_inicial);
 						
 						if(cant_inicial<cant_min){
-							printf("\n\nPerdiste, gano computadora %d \n\n",puntaje-5);
+							printf("\n\nLA COMPUTADORA GANO!!! Puntaje obtenido:%d \n\n",puntaje-5);
 							break;
 						}
 						
@@ -159,7 +159,7 @@ void juego()
 	                	printf("\nLas monedas que quedan son : %d",cant_inicial);
 	            		
 	            		if(cant_inicial<cant_min){
-							printf("\n\nFELIZCIDADES USTED GANO!!  %d \n\n",puntaje+5);
+							printf("\n\nFELIZCIDADES USTED GANO!! Puntaje obtenido:%d \n\n",puntaje);
 							break;
 						}
 		
@@ -183,8 +183,8 @@ void Reglas()
 	printf("\n El juego pondra la pila de monedas a sacar aleatoriamente a su vez elige el turno , se juega de a dos.");
 	printf("\n El usuario y la computadora deberan ir sacando monedas de la pila, hasta que la pila se quede sin monedas");
 	printf("\n o con monedas menor a la cantidad minima, el primero en dejar la pila sin monedas GANA ");
-    printf("\n\n\t Puntaje: ");
-    printf("\n Para calcular el puntaje si el usuario llega primero gana un total de 5 puntos, de lo contrario gana la computadora ");
+	printf("\n Para calcular el puntaje si el usuario llega primero gana un total de 5 puntos, de lo contrario gana la computadora ");
+    printf("\n Puntaje inical: 0");
     printf("\n\n");
 	system("pause");
 }
