@@ -4,7 +4,7 @@
 #include <string.h>
 #include <conio.h>
 #include <ctype.h>
-#include "Metodos.h"
+#include "Libreria.h"
 
 void MayMen();
 void Adivinium();
@@ -121,7 +121,6 @@ void Adivinium()
 	
 	separar(numero_aleatorio,primero,segundo,tercero,cuarto);
 	
-	printf("Numero: %d",numero_aleatorio);
 	do
 	{	
 	printf("\n\nIngrese un numero: ");
