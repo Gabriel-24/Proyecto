@@ -1,9 +1,11 @@
 int menu();
+void sistema();
 void juego();
 void separar(int n, int &d1, int &d2, int &d3, int &d4);
 void warcoin();
 void Reglas();
 int comprobar_monedas_usuario(int cant_max, int cant_min,int monedas);
+void equivocacion(int errores);
 
 
 
@@ -200,9 +202,78 @@ int comprobar_monedas_usuario(int cant_max, int cant_min,int monedas)
 	 return monedas;                                      
 }
 
+void sistema()
+{
+	system ("color 30");
+	system("cls");
+}
 
-
-
+void equivocacion(int errores)
+{
+	 switch(errores)
+	{	
+		case 0:
+			printf("\n |--------");
+			printf("\n |        |");
+			printf("\n |         ");
+			printf("\n |         ");
+			printf("\n __        ");
+			printf("\n[__]       ");
+			
+			break;
+	   case 1: 
+			printf("\n |--------");
+			printf("\n |        |");
+			printf("\n |        O");
+			printf("\n |         ");
+			printf("\n __        ");
+			printf("\n[__]       ");
+	   	break;
+	   case 2: 
+			printf("\n |--------");
+			printf("\n |        |");
+			printf("\n |       \\O");
+			printf("\n |         ");
+			printf("\n __        ");
+			printf("\n[__]       ");
+	   	break; 
+	   case 3: 
+			printf("\n |--------  ");
+			printf("\n |        |  ");
+			printf("\n |       \\O/  ");
+			printf("\n |          ");
+			printf("\n __         ");
+			printf("\n[__]        ");
+	   	break;
+	   case 4: 
+			printf("\n |--------");
+			printf("\n |        |");
+			printf("\n |       \\O/");
+			printf("\n |        |");
+			printf("\n __         ");
+			printf("\n[__]        ");
+	   	break;
+	   case 5: 
+			printf("\n |--------");
+			printf("\n |        |");
+			printf("\n |       \\O/");
+			printf("\n |        |");
+			printf("\n __       /");
+			printf("\n[__]       ");
+	   	break;
+		case 6: 
+			printf("\n |--------");
+			printf("\n |        |");
+			printf("\n |       \\O/");
+			printf("\n |        |");
+			printf("\n __       /\\");
+			printf("\n[__]       ");   
+	   case 7: 
+			printf("\nGAME OVER. Puntaje Obtenido: 0");
+	   	break;  
+   }
+	
+}
 
 
 

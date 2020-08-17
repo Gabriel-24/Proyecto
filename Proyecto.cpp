@@ -1,6 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+#include <string.h>
+#include <conio.h>
+#include <ctype.h>
 #include "Metodos.h"
 
 void MayMen();
@@ -10,6 +13,7 @@ void Ahorcado();
 
 main()
 {
+	sistema();
 	int opcion_final;
 	opcion_final=menu();
 	do
@@ -44,8 +48,10 @@ main()
 
 void MayMen()
 {
-	system("cls");
+	sistema();
 	int numero_aleatorio=0,intentos=0,intentos_falso=1,contador=9, numero_ingresado, numero_mayor=999, numero_menor=1;
+	printf("\nMAYMEN");
+	printf("\n=======");
 	printf("\n--Este juego consiste en adivinar un numero que esta entre 1 y 999 denominado numero secreto--");
 	printf("\n1. Itentos para encontrar el numero: 10");
 	printf("\n2. El puntaje obtenido depende de la cantidad de intentos");
@@ -89,17 +95,20 @@ void MayMen()
 			printf("\n\nNo acerto el numero ingresado ");
 			printf("\n\nEl numero aleatorio es: %d",numero_aleatorio);
 		}
-		
+		system("pause");
 }
 
 void Adivinium()
 {
-	system("cls");
+	sistema();
 	int puntaje=11,numero_aleatorio=0,numero_ingresado;
 	int contador=9,intentos=0,intento_falso=1,correctos=0,malaposicion=0;
 	int primero, segundo, tercero, cuarto;
 	int x1,x2,x3,x4;
 	
+	
+	printf("\nADIVINUM ");
+	printf("\n=======");
 	printf("\n --Es un juego en el que se tiene que adivinar un numero de 4 cifras entre 1000 y 9999--");
 	printf("\n1.Intentos para encontrar el numero: 10");
 	printf("\n2.El puntaje obtenido depende de la cantidad de intentos");
@@ -150,7 +159,7 @@ void Adivinium()
 	{
 		printf("\n\nNo adivino el numero aleatorio, El numero aleatorio era: %d. Puntaje obtenido: 0",numero_aleatorio);
 	}
-		
+	system("pause");	
 }
 
 
@@ -159,8 +168,7 @@ void WarCoin()
 	int opcion=0;
 	srand(time(NULL));
 	do{
-	system("cls");
-	system ("color 30");
+	sistema();
 	warcoin();	
 	printf("\n1.- Comenzar Juego\n");
     printf("2.- Reglas\n");
@@ -185,8 +193,93 @@ void WarCoin()
 
 void Ahorcado()
 {
+	typedef char cadena[15];
+	cadena palabras[30] ={"COMPILADOR","ENTORNO","COMPUTADORA","ESTRUCTURA","SELECCION","REPETICION","DIRECTIVA","ALGORITMO","PROGRAMA","EJECUCION","INT","FLOAT","CHAR","DOUBLE","LONG","IF","ELSE","FOR","WHILE","RETURN","BREAK","SWITCH","CASE","MAIN","INCLUDE","DEFINE","STRUCT","CIN","COUT","ENDLINE"};
+	char aux[15];
+	int num,vidas=6,error=0,correctas=0;
+	char c;
+	bool bandera=true;
+	char  guion={'_'};
+	num=0;
 	
+	cadena palabra;
+	do{
+	system("cls");
+	printf("\nAHORCADO");
+	printf("\n=======");
+	printf("\n\nINICIO");
+	printf("\n\nEl jugador 1 elije una palabra: ");
+	gets(palabra);
+	strupr(palabra);
+	for(int i=0;i<30;i++){
+		if(strcmp(palabra,palabras[i])==0){
+			bandera=false;
+			break;
+		}
+	}
+	if(bandera==false){
+		break;
+	}
+	printf("\nPALABRA NO VALIDA\n\n");
+	system("pause");
+	}while(1);
+	
+
+	
+	for(int i=0;i<strlen(palabra);i++){
+		aux[i]=guion;
+	}
+	
+	do{
+	
+	bandera=true;
+	
+	system("cls");
+	
+	printf("vidas: %d",vidas);
+	
+	equivocacion(error);
+	
+	printf("\n\n");
+	
+	for(int i=0;i<strlen(palabra);i++)
+	{
+		printf(" %c",aux[i]);
+	}
+	
+	printf("\nJugador 2 adivina: ");
+	scanf("%c",&c);
+	c=toupper(c);
+	_flushall();
+	for(int i=0;i<strlen(palabra);i++)
+	{
+		if(c==palabra[i])
+		{
+			aux[i]=palabra[i];
+			correctas++;
+			bandera=false;
+		}
+	}
+	
+	if(bandera==true)
+		{
+			vidas--;
+			error++;
+		}
+		
+	if(correctas==strlen(palabra))
+	{
+		printf("HAS GANADO LA PARTIDA!!");	
+	 	printf("El puntaje obtenido es de: %d PUNTOS.", 50-(2*error));
+	 	error=8;
+	 	break;
+	}
+	
+	}while(vidas>0 && error<6);
+	equivocacion(error);
+	system("pause");
 }
+
 
 
 
