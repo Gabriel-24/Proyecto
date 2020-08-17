@@ -115,9 +115,12 @@ void Adivinium()
 	printf("\n4.Si el jugador adivina el numero gana la partida");
 	printf("\n5.Se te indicara las posiciones que ocupan los numeros ingresados (misma posicion o otra posicion)(1 vez como maximo)");
 	printf("\n6.Jugaremos con numeros de 4 cifras");
+	
 	srand(time(NULL));
 	numero_aleatorio=1000 + rand()%8999;;
+	
 	separar(numero_aleatorio,primero,segundo,tercero,cuarto);
+	
 	printf("Numero: %d",numero_aleatorio);
 	do
 	{	
